@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Velvetique</title>
     <link rel="stylesheet" href="./Estilos/Style.css" />
     <!--Link para iconos-->
     <link
@@ -14,17 +14,39 @@
   <body>
     <header id="header">
       <section id="section1">
-        <img
-          class="logo"
-          src="https://i.pinimg.com/736x/79/c8/17/79c8178f1ef662f42c8ab038fa60b307.jpg"
-          alt=""
-        />
+        <div class="logo-name">
+          <img
+            class="logo"
+            src="https://i.pinimg.com/736x/79/c8/17/79c8178f1ef662f42c8ab038fa60b307.jpg"
+            alt=""
+          />
+          <h2>VELVETIQUE</h2>
+        </div>
 
-        <h2>VELVETIQUE</h2>
-        <p class="resaltar">HOME</p>
-        <p class="resaltar">SHOP</p>
-        <p class="resaltar">COLLECTION</p>
-        <p class="resaltar">CONTACT</p>
+        <nav class="resaltar">
+          <a href="#" class="menu">HOME</a>
+          <div class="dropdown">
+            <a href="#" class="menu">SHOP ▾</a>
+            <div class="dropdown-menu">
+              <a href="#">SKIN CARE</a>
+              <a href="#">MAKE UP</a>
+              <a href="#">HAIR CARE</a>
+              <a href="#">BODY CARE</a>
+              <a href="#">SUN CARE</a>
+              <a href="#">GIFTS SETS</a>
+            </div>
+          </div>
+          <a href="#" class="menu">COLLECTION</a>
+          <a href="#" class="menu">CONTACT</a>
+        </nav>
+
+          <div class="header-icons">
+            <a href="#"><i class="bi bi-search"></i></a>
+            <a href="registro.html"><i class="bi bi-person"></i></a>
+            <a href="#"><i class="bi bi-bag"></i></a>
+          </div>
+
+        </div>
       </section>
     </header>
 
@@ -274,11 +296,10 @@
 
             <div class="social-icons">
               <a href="#"><i class="bi bi-facebook"></i></a>
-
-              <a href="#"><i class="bi bi-instagram"></i></a>
-
-              <a href="#"><i class="bi bi-pinterest"></i></a>
+               <a href="#"><i class="bi bi-instagram"></i></a>
+               <a href="#"><i class="bi bi-pinterest"></i></a>
             </div>
+            <p class="copyright">&copy; 2027 Velvetique beauty.all Rights Reserve </p>
           </div>
           <div>
             <h5>QUICK LINKS</h5>
@@ -318,5 +339,13 @@
         </div>
       </footer>
     </section>
+    <script>
+      const dropdown = document.querySelector(".dropdown");
+      const button = document.querySelector(".dropdown-btn");
+
+      button.addEventListener("click", () => {
+        dropdown.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
