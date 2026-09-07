@@ -10,7 +10,7 @@
   justify-content: space-around;
   width: 100vw;
   height: 100vh;
-  background-image: url(./register.png);
+  background-image: url(./contactImage.png);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -134,6 +134,10 @@
 a {
   text-decoration: none;
   color: #9c4156;
+}
+
+a:hover{
+  border-bottom: #9c4156 solid 2px;
 }
 
 button {
