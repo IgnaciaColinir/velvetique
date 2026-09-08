@@ -140,7 +140,7 @@ a {
   color: white;
 }
 
-a:hover{
+a:hover {
   border-bottom: #9c4156 solid 2px;
 }
 
@@ -151,7 +151,7 @@ button {
   font-size: 15px;
   color: #ffffff;
   background-color: #9c4156;
-  padding: 10px 40px 10px 40px;
+  padding: 10px 40px;
   margin: 30px 0px 0px 5px;
 }
 
@@ -161,13 +161,67 @@ span {
 }
 
 @media (max-width: 768px) {
-  .register,
-  .header,
-  .box,
-  .register-form label,
-  .terms {
-    float: none;
-    text-align: center;
+  .register {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+
+  body{
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .header {
     width: 100%;
+    margin: auto;
+    }
+
+  .header h3 {
+    font-size: 38px;
+    margin-bottom: 15px;
+  }
+
+  .header h2 {
+    text-align: center;
+  }
+
+  .header h4 {
+    font-size: 18px;
+    margin-right: 100px;
+  }
+
+  .header :nth-child(4) {
+    padding-top: 25px;
+  }
+
+  .header p {
+    font-size: 14px;
+    text-align:start;
+    margin-right: 40px;
+  }
+
+  .box {
+    width: 100%;
+    max-width: 500px;
+    min-height: auto;
+    padding: 25px 20px;
+    margin: 0;
+  }
+
+  .box h2 {
+    font-size: 24px;
+  }
+
+  .register-form p {
+    font-size: 17px;
+  }
+
+  .terms {
+    flex-direction: column;
+    gap: 5px;
   }
 }

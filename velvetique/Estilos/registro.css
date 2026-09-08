@@ -136,7 +136,7 @@ a {
   color: #9c4156;
 }
 
-a:hover{
+a:hover {
   border-bottom: #9c4156 solid 2px;
 }
 
@@ -154,4 +154,59 @@ span {
   display: block;
   margin-top: 10px;
   padding-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .register {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+    min-height: 100vh;
+    padding: 30px 20px;
+  }
+
+  .header {
+    width: 100%;
+    max-width: 550px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .header h3 {
+    font-size: 27px;
+  }
+
+  .header h2 {
+    margin: 15px 0;
+  }
+
+  .header h4 {
+    margin: 0 auto 15px;
+    padding-bottom: 15px;
+  }
+
+  .header :nth-child(4) {
+    padding-top: 20px;
+  }
+
+  .header p {
+    font-size: 14px;
+  }
+
+  .box {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    margin: 0;
+  }
+
+  .box h2 {
+    padding: 15px 0;
+    font-size: 22px;
+  }
+
+  .register-form p {
+    font-size: 17px;
+  }
 }
