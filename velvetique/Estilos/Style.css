@@ -494,3 +494,158 @@ button:hover {
   border: none;
   outline: none;
 }
+
+@media (max-width: 768px) {
+  header {
+    margin-left: 0;
+  }
+
+  #section1 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .logo-name {
+    margin-left: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img.logo {
+    width: 55px;
+    height: 55px;
+  }
+
+  .logo-name h2 {
+    font-size: 22px;
+    margin-top: 0;
+  }
+
+  .resaltar {
+    width: 100%;
+    padding-left: 0;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .resaltar a {
+    font-size: 13px;
+  }
+
+  .header-icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  #anuncio {
+    min-height: 400px;
+    padding: 30px 20px;
+    background-position: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #anuncio h3 {
+    font-size: 20px;
+  }
+
+  #anuncio h2 {
+    font-size: 28px;
+  }
+
+  #anuncio h4 {
+    font-size: 16px;
+  }
+
+  .caja-flotante {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .caluga-caja {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #categorias {
+    padding: 50px 15px;
+  }
+
+  .contenedor-calugas {
+    gap: 20px;
+  }
+
+  .caluga img {
+    width: 130px;
+    height: 140px;
+  }
+
+  .seccion-dividida {
+    width: 90%;
+    height: auto;
+    max-height: none;
+    flex-direction: column;
+  }
+
+  .columna {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .columna.texto {
+    min-height: 250px;
+    padding: 25px;
+  }
+
+  .columna.texto h3 {
+    font-size: 30px;
+  }
+
+  .columna.texto p {
+    font-size: 20px;
+  }
+
+  .columna.imagen {
+    height: 250px;
+  }
+
+  #Sellers {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .tarjeta-producto {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .pre-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .social-icons {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .social-icons a {
+    font-size: 21px;
+  }
+
+  .btn-sub {
+    width: 100%;
+  }
+}
