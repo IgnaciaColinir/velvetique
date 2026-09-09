@@ -2,67 +2,86 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Times New Roman", Times, serif;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
-
 body {
   width: 100%;
+  background-color: #fafafa;
+  overflow-x: hidden;
+  
 }
 
 header {
   background-color: #f9f9f9;
-  border-bottom: 0.5px solid #dfdfdf;
-  padding: 10px 0;
-  font-size: 22px;
+  border-bottom: 1px solid #dfdfdf;
+  padding: 12px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-header p {
+header a {
   letter-spacing: 2px;
-}
-
-img.logo {
-  width: 70px;
-  height: 70px;
-  border-radius: 100%;
-  object-fit: cover;
+  font-size: 20px;
 }
 
 #section1 {
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: row; /*elemnto de un lado a lado*/
-  align-items: center; /*alineacion de items*/
-  justify-content: space-evenly; /*dstribucion uniforme*/
-  flex-wrap: wrap; /*adaptable para pantallas pequena*/
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 15px;
 }
 
-.resaltar {
-  transition:
-    transform 0.2s ease,
-    color 0.2s ease;
+img.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
 }
+
+.bi {
+  font-size: 1.6rem;
+  vertical-align: middle;
+  margin-right: 6px;
+  color:#9c4156
+}
+
+
+
+.resaltar {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;         /* Mantiene el color base del texto */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
 .resaltar:hover {
   color: #c97387;
-  transform: scale(1.1); /* Agranda el texto suavemente sin desarmar el nav */
+  transform: scale(1.05);
   cursor: pointer;
-  cursor: pointer; /* Cambia el puntero al pasar el ratón */
 }
 
 #anuncio {
   width: 100%;
-  min-height: 500px;
+  min-height: 520px;
   background-image: url("https://i.pinimg.com/1200x/1a/f0/bf/1af0bfaa1790e7ed11f939e9327944e3.jpg");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  padding: 40px 40px 40px 15%;
-
+  padding: 60px 20px 80px 10%;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 10px;
+  gap: 12px;
+  color: #2c2c2c;
+  margin-bottom: 60px;
 }
 
 #anuncio h3 {
@@ -78,25 +97,30 @@ img.logo {
   font-size: 20px;
 }
 
-#anuncio {
-  position: relative;
-}
+
 
 .caja-flotante {
   position: absolute;
-  top: 100%; /* La coloca justo donde termina la primera sección */
-  left: 50%; /* La centra horizontalmente */
-  transform: translate(
-    -50%,
-    -50%
-  ); /* Centra el elemento en su propio eje X y sube la mitad de su alto en Y */
-  width: 70%;
-  max-width: 900px;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1100px;
   background-color: #ffffff;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Sombra para dar efecto de elevación */
-  padding: 15px 30px;
-  border-radius: 8px;
-  z-index: 10;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  border-radius: 10px;
+  z-index: 20;
+}
+
+.contenedor-calugas-caja {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .caluga-caja {
@@ -104,26 +128,25 @@ img.logo {
   flex-direction: row;
   align-items: center;
   font-size: 12px;
-  gap: 8px;
+  gap: 12px;
 }
 
 .caluga-caja img {
-  width: 50px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   object-fit: cover;
-  border-radius: 100%;
-  transition: transform 0.3 ease;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
 }
 
 button {
-  background-color: #c97387; /* Color de fondo del botón */
-  color: white; /* Color del texto */
-  border: none; /* Opcional: quita el borde por defecto */
-  padding: 12px 24px; /* Opcional: le da espacio interno para verse mejor */
-  border-radius: 5px; /* Opcional: redondea las esquinas */
-  cursor: pointer; /* Cambia el puntero al pasar el ratón */
-  font-weight: bold;
-  margin-top: 10px;
+  background-color: #c97387;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
   transition: background-color 0.2s ease;
 }
 button:hover {
@@ -132,7 +155,14 @@ button:hover {
 
 #categorias {
   text-align: center;
-  padding: 70px 20px;
+  padding: 40px 20px 60px 20px;
+  margin: 0 auto;
+}
+
+.enlace-caluga {
+  text-decoration: none; /* Quita el subrayado del enlace */
+  color: inherit;        /* Mantiene los colores originales de tu texto */
+  display: block;        /* Asegura que abarque todo el tamaño de la caluga */
 }
 
 #categorias h4 {
@@ -153,23 +183,25 @@ button:hover {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 25px;
+  gap: 40px;
   flex-wrap: wrap;
 }
+
+
 .caluga {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 13px;
-  gap: 8px;
+  gap: 12px;
 }
 
 .caluga img {
-  width: 160px;
-  height: 170px;
+  width: 180px;
+  height: 220px;
   object-fit: cover;
   border-radius: 100%;
-  transition: transform 0.3 ease;
+  transition: transform 0.3s ease;
 }
 
 .caluga img:hover {
@@ -179,77 +211,57 @@ button:hover {
 
 #banner-dividido {
   width: 100%;
-  padding: 20px 0; /* Separa un poco arriba y abajo de la sección de calugas */
+  padding: 30px 0;
 }
 
-/* 2. CONTENEDOR: Le da el mismo ancho máximo y centrado que las calugas */
 .seccion-dividida {
-  width: 90%; /* Mismo porcentaje de margen lateral que tus otras secciones */
-  max-width: 1100px; /* Ancho máximo en monitores grandes */
-  margin: 0 auto; /* CENTRA la caja en la pantalla */
-
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
-  height: 300px; /* Alto fijo para la sección */
-  border-radius: 12px; /* Opcional: bordes redondeados en las esquinas */
+  height: 350px;
+  max-height: 350px;
+  border-radius: 12px;
+  box-sizing: border-box;
   overflow: hidden; /* Asegura que la imagen no sobrepase los bordes */
 }
 
-.seccion-dividida {
-  display: flex;
-  flex-direction: row; /* Organiza las 2 columnas lado a lado */
-  width: 100%;
-  height: 300px;
-  max-height: 300px; /* Altura recomendada de la sección */
-  box-sizing: border-box;
-  overflow: hidden; /* En pantallas pequeñas apila una debajo de la otra */
-}
 
 /* Regla para que ambas columnas ocupen exactamente el 50% */
 .columna {
   width: 50%;
-  flex: 0 0 50%;
-  height: 100%;
-  box-sizing: border-box;
+  flex: 1;
 }
 
 .columna.texto button {
   background-color: white;
   color: #9c4156;
-
-  border: none; /* Opcional: quita el borde por defecto */
-  padding: 12px 24px; /* Opcional: le da espacio interno para verse mejor */
-  border-radius: 5px; /* Opcional: redondea las esquinas */
-  cursor: pointer; /* Cambia el puntero al pasar el ratón */
-  font-weight: bold;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
   margin-top: 10px;
-  /* Transición suave para tamaño, color de texto y color de fondo */
-  transition:
-    transform 0.2s ease,
-    background-color 0.2s ease,
-    color 0.2s ease;
+  transition:all 0.2 ease;
 }
 
 .columna.texto button:hover {
-  background-color: #9e5969; /* Invierte el fondo a tono oscuro */
-  color: white; /* Cambia las letras a blanco para excelente contraste */
-  transform: scale(
-    1.05
-  ); /* 1.05 suele verse mejor que 1.1 en botones (evita verse muy tosco) */
+  background-color: #9e5969;
+  color: white;
+  transform: scale(1.05);
   cursor: pointer;
 }
 
-/* ESTILOS DE LA MITAD IZQUIERDA (Texto + Fondo) */
 .columna.texto {
-  background-color: #bc6c7f; /* Color de fondo */
-  padding: 30px;
-  /* Centrado interno de los contenidos */
+  background-color: #bc6c7f;
+  padding: 40px 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* Alinea a la izquierda (cambiar a 'center' para centrar todo) */
+  align-items: center;
   text-align: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .columna.texto p {
@@ -268,12 +280,31 @@ button:hover {
   object-fit: cover;
   display: block;
 }
+
 .columna.imagen {
-  width: 100%;
   overflow: hidden;
 }
 
+
+#Sellers {
+  text-align: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding:40px 0;
+}
+
+#Sellers h3 {
+  color: #9c4156;
+  font-weight: bold;
+}
+#Sellers h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .calugas-sellers {
+  width:100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -287,7 +318,7 @@ button:hover {
   height: 170px;
   object-fit: cover;
   border-radius: 5%;
-  transition: transform 0.3 ease;
+  transition: transform 0.3s ease;
 }
 
 .tarjeta-producto {
@@ -311,12 +342,7 @@ button:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-#Sellers h3 {
-  color: #9c4156;
-  font-weight: bold;
-}
-
-#Sellers {
+.contenedor-Sellers {
   display: flex;
   flex-direction: row; /* Coloca los elementos en fila (uno al lado del otro) */
   justify-content: center; /* Centra el grupo de tarjetas horizontalmente */
@@ -329,6 +355,8 @@ button:hover {
   margin: 0 auto; /* Centra la sección entera en la página */
   padding: 20px;
 }
+
+
 
 .pre-footer {
   width: 100%;
@@ -437,4 +465,64 @@ button:hover {
   font-size: 14px;
   border: none;
   outline: none;
+}
+
+@media (max-width: 768px) {
+  .caja-flotante {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: 90% !important;
+    margin: 20px auto 40px auto !important; /* Coloca la caja completamente ABAJO del banner */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+    padding: 20px 15px !important;
+  }
+
+  .contenedor-calugas-caja {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+  }
+
+  .caluga-caja {
+    width: 100% !important;
+    justify-content: flex-start !important;
+  }
+
+  #anuncio {
+    margin-bottom: 0 !important;
+    padding: 40px 20px 30px 20px !important;
+    min-height: auto !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .seccion-dividida {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .columna {
+    width: 100%;
+  }
+
+  .columna.imagen img {
+    height: 250px;
+  }
+
+  .contenedor-calugas {
+    gap: 20px;
+  }
+
+  .caluga img {
+    width: 130px;
+    height: 160px;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
 }
